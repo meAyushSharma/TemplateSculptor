@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav > div,
+a {
+  height: 100px;
+  width: 150px;
+  background-color: #457b9d;
+  margin: 5px;
+  display: grid;
+  place-content: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
