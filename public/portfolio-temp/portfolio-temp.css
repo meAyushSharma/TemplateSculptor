@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-text-color: #1d1d1b;
+  --highlighted: #615f9b;
+  --text-color: #3c3c3b;
+  --bg-color-preview-window: rgb(239, 236, 231);
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-image: conic-gradient(
+    from 52deg at 50% 50%,
+    #f8edebc3 0%,
+    rgba(113, 196, 255, 0.739) 100%
+  );
+}
+.main-heading {
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffffea;
+  width: auto;
+  height: 50px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+[contenteditable] {
+  outline: 0 solid transparent;
+}
+
+.main-window {
+  width: 94vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 23px 23px 23px 23px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.preview-window {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  overflow-y: auto;
+  background-color: var(--bg-color-preview-window);
+}
+
+.preview-window::-webkit-scrollbar {
+  display: none;
+}
+
+.main-window > .preview-window {
+  width: 94%;
+  aspect-ratio: 2.137/1;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 6px;
+}
+
+.preview-window .preview-nav {
+  height: 10%;
+  width: 97%;
+  display: flex;
+  background-color: var(--bg-color-preview-window);
+  flex-direction: row;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.453);
+  margin: auto;
+  margin-bottom: 20px;
+  /* margin-top: 10px; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.preview-window .preview-nav a {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  text-decoration: none;
+  color: var(--nav-text-color);
+  border-radius: 20px 20px 20px 20px;
+  display: grid;
+  place-content: center;
+  margin: 5px 10px;
+  font-size: 1rem;
+}
+
+a:hover {
+  background-color: var(--highlighted);
+  color: var(--bg-color-preview-window) !important;
+  transition: all 0.3s;
+}
+
+#about .greeting {
+  width: 60%;
+  height: auto;
+  font-size: 32px;
+  color: var(--text-color);
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 80px;
+}
+
+#greeting-pic {
+  display: inline-block;
+  border-radius: 50%;
+  top: -5px;
+}
+
+#about {
+  width: 100%;
+}
+
+#about .image-vision {
+  width: 100%;
+  object-fit: fill;
+  overflow: hidden;
+  position: relative;
+}
+
+#about .image-vision .vision-heading {
+  position: absolute;
+  top: 40%;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--bg-color-preview-window);
+}
+#about .image-vision .vision-text {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+}
+
+.main-window > .options--controls {
+  width: 96%;
+  height: 20vh;
+  border: 1px solid black;
+  border-radius: 23px 23px 23px 23px;
+  margin: auto;
+}

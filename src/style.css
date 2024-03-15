@@ -1,19 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --nav-ele-bg: #020413;
+  --nav-bg: #f1faee;
+  --bg-color: #03071e;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-nav > div,
-a {
-  height: 100px;
-  width: 150px;
-  background-color: #457b9d;
-  margin: 5px;
-  display: grid;
-  place-content: center;
+body {
+  background-color: var(--bg-color);
+  background-image: url(img/bg-img.jpg);
+  background-image: url(img/bg2-img.jpg);
+  height: auto;
+  font-family: "Poppins", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-a {
-  text-decoration: none;
-  color: black;
+
+.nav-container {
+  height: 75px;
+  width: 70vw;
+  border: 1px solid #fefae0;
+  border-radius: 47px 47px 47px 47px;
+  background-color: var(--nav-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 20px;
 }
+
+.nav-container > #logo {
+  width: auto;
+  height: 70%;
+  padding: 10px;
+  border: 1px solid #03071e;
+  border-radius: 30px 30px 30px 30px;
+  background-color: var(--nav-ele-bg);
+  text-align: center;
+  color: white;
+  margin: 15px;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.nav-container .right-nav > div {
+  width: auto;
+  height: 70%;
+  padding: 10px;
+  border: 1px solid #03071e;
+  border-radius: 30px 30px 30px 30px;
+  background-color: var(--nav-ele-bg);
+  text-align: center;
+  color: white;
+  font-family: "Poppins", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.hero {
+  width: 55vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.hero > .heading {
+  font-size: 3.2rem;
+  color: white;
+  margin: auto;
+  margin-bottom: 5vh;
+}
+.hero > .para1,
+.para2 {
+  color: rgb(214, 212, 212);
+  margin: auto;
+}
+.to-scroll {
+  min-height: 100vh;
+}
+
+.template-collection {
+  width: 75vw;
+  height: auto;
+}
+
