@@ -138,15 +138,28 @@ a:hover {
 
 #about .image-vision .vision-heading {
   position: absolute;
-  top: 40%;
+  top: 30%;
+  left: 8%;
   font-size: 40px;
   font-weight: bold;
-  color: var(--bg-color-preview-window);
+  color: var(--nav-text-color);
 }
+
 #about .image-vision .vision-text {
   position: absolute;
-  top: 50%;
-  left: 80px;
+  top: 33%;
+  left: 20%;
+  color: var(--text-color);
+  font-size: 25px;
+}
+
+.image-vision:hover > #first-img {
+  /* filter: brightness(0) saturate(100%) invert(39%) sepia(9%) saturate(2364%)
+    hue-rotate(203deg) brightness(95%) contrast(91%); */
+  filter: grayscale(100%);
+  opacity: 40%;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 .main-window > .options--controls {
