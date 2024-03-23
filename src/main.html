@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template Sculptor</title>
     <link
+      rel="icon"
+      href="img/logo-design-c&c-32x32.ico.ico"
+      type="image/icon
+    type"
+    />
+    <link
       href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&f[]=general-sans@1&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--nav bar here-->
     <div id="nav-bar-container">
-      <div class="logo-container">
+      <div class="logo-container" id="logo-id">
         <img
           src="img/logo-design-c&c-transparent.png"
           alt="logo"
@@ -27,6 +37,7 @@
       </div>
     </div>
     <!--hero section here-->
+    <div id="top-here"></div>
     <div id="hero-container">
       <div class="central-image-container">
         <img
@@ -57,13 +68,54 @@
       <!-- TEMPLATE SECTION starts here-->
       <div id="template">
         <div class="template-heading">Templates</div>
-        <div class="first-template-container">
-          <div class="portfolio-template-image">
-            
+
+        <!--template containers starts here-->
+        <div class="first-row">
+          <div class="first-template-container"></div>
+          <div class="description-all">Personal Portfolio Template</div>
+        </div>
+        <div class="second-row">
+          <div class="container-left">
+            <div class="left-background"></div>
+            <div class="description-all">Error Template</div>
+          </div>
+          <div class="container-right">
+            <div class="right-background"></div>
+            <div class="description-all">Something</div>
           </div>
         </div>
       </div>
-  
+      <!--template ENDS here-->
+      <div class="contact-at-heading">Contact</div>
+      <div class="contact-container">
+        <div class="contact-details">
+          <p class="contact-heading">Contact Details</p>
+          <a href="mailto:ayushsharma.codes@gmail.com" class="mail"
+            >ayushsharma.codes@gmail.com</a
+          >
+        </div>
+        <div class="socials">
+          <div class="socials-heading">Socials</div>
+          <div class="social-links">
+            <a href="https://github.com/meAyushSharma" class="github">Github</a>
+            <a
+              href="https://www.linkedin.com/in/ayush-sharma-b07617290/"
+              class="linkedin"
+              >LinkedIn</a
+            >
+            <a href="https://meayush.hashnode.dev/" class="hashnode"
+              >Hashnode</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--contact details ends here-->
+      <div class="footer">
+        <div class="copyright">©️ 2024 Ayush Sharma</div>
+        <span class="material-symbols-outlined">navigation</span>
+      </div>
     </div>
+    <!--long div ENDS HERE-->
+    <script src="main.js"></script>
   </body>
 </html>
