@@ -52,6 +52,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-top: 8px;
 }
 
 .preview-window {
@@ -60,10 +61,16 @@ body {
   font-style: normal;
   overflow-y: auto;
   background-color: var(--bg-color-preview-window);
+  position: relative;
+  transition: all 0.3s;
 }
 
 .preview-window::-webkit-scrollbar {
   display: none;
+}
+
+.preview-window:hover {
+  border-radius: 23px 23px 23px 23px;
 }
 
 .main-window > .preview-window {
@@ -71,101 +78,107 @@ body {
   aspect-ratio: 2.137/1;
   border: 1px solid black;
   margin: auto;
-  margin-top: 6px;
+  margin-top: 16px;
+  margin-bottom: 2rem;
 }
 
-.preview-window .preview-nav {
-  height: 10%;
-  width: 97%;
-  display: flex;
-  background-color: var(--bg-color-preview-window);
-  flex-direction: row;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.453);
-  margin: auto;
-  margin-bottom: 20px;
-  /* margin-top: 10px; */
-  position: sticky;
-  top: 0;
-  z-index: 1;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-.preview-window .preview-nav a {
-  display: block;
-  width: auto;
-  height: auto;
-  padding: 8px;
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: var(--nav-text-color);
-  border-radius: 20px 20px 20px 20px;
-  display: grid;
-  place-content: center;
-  margin: 5px 10px;
-  font-size: 1rem;
 }
 
-a:hover {
-  background-color: var(--highlighted);
-  color: var(--bg-color-preview-window) !important;
-  transition: all 0.3s;
+main {
+  padding: 20px;
 }
 
-#about .greeting {
-  width: 60%;
-  height: auto;
-  font-size: 32px;
-  color: var(--text-color);
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-bottom: 80px;
+section {
+  margin-bottom: 20px;
 }
 
-#greeting-pic {
-  display: inline-block;
-  border-radius: 50%;
-  top: -5px;
-}
-
-#about {
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
   width: 100%;
-}
-
-#about .image-vision {
-  width: 100%;
-  object-fit: fill;
-  overflow: hidden;
-  position: relative;
-}
-
-#about .image-vision .vision-heading {
   position: absolute;
-  top: 30%;
-  left: 8%;
-  font-size: 40px;
-  font-weight: bold;
-  color: var(--nav-text-color);
-}
-
-#about .image-vision .vision-text {
-  position: absolute;
-  top: 33%;
-  left: 20%;
-  color: var(--text-color);
-  font-size: 25px;
-}
-
-.image-vision:hover > #first-img {
-  /* filter: brightness(0) saturate(100%) invert(39%) sepia(9%) saturate(2364%)
-    hue-rotate(203deg) brightness(95%) contrast(91%); */
-  filter: grayscale(100%);
-  opacity: 40%;
-  transition: all 0.2s;
-  cursor: pointer;
+  bottom: 0;
 }
 
 .main-window > .options--controls {
   width: 96%;
-  height: 20vh;
-  border: 1px solid black;
-  border-radius: 23px 23px 23px 23px;
+  min-height: 20vh;
+  height: auto;
+  border: 2px solid rgba(255, 166, 0, 0.837);
+  border-radius: 20px 20px 20px 20px;
   margin: auto;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.save-button {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  font-family: "Poppins", "sans-serif";
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--highlighted);
+  color: var(--bg-color-preview-window);
+  border-radius: 23px 23px 23px 23px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.html,
+.css {
+  font-family: "Poppins", "sans-serif";
+  color: var(--text-color);
+  text-align: center;
+  margin: 0.5rem;
+
+  position: relative;
+
+  padding: 5px;
+  height: auto;
+}
+.html-heading,
+.css-heading {
+  border-bottom: 2px solid orange;
+}
+.html::after,
+.css::after {
+  content: "";
+  height: 0;
+  width: 3px;
+  background-color: #3c3c3bb3;
+  background-color: orange;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-out;
+}
+
+.html:hover::after,
+.css:hover::after {
+  height: 100%;
 }

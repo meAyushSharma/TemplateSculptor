@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color: #fafaf9;
   --hero-text-color: #262626;
@@ -227,6 +232,11 @@ body {
   margin: 0.7rem 0 3rem 0;
   font-family: var(--body-font);
   font-weight: 600;
+}
+
+.description-all > a {
+  text-decoration: none;
+  color: var(--nav-color);
 }
 
 .first-template-container:hover,

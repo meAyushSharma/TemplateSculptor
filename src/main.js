@@ -21,3 +21,11 @@ function navigateToSection(sectionId) {
   section.scrollIntoView({ behavior: "smooth" });
   history.pushState(null, null, "#" + sectionId);
 }
+
+// document.getElementById("first-temp").addEventListener("click", (this) => {
+//   const a = document.createElement("a");
+//   a.setAttribute("href", "/portfolio");
+//   this.appendChild(a);
+//   a.click();
+//   this.removeElement(a);
+// });
