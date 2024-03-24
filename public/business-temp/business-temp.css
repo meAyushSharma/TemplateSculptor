@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-text-color: #1d1d1b;
+  --highlighted: #615f9b;
+  --text-color: #3c3c3b;
+  --bg-color-preview-window: rgb(239, 236, 231);
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-image: conic-gradient(
+    from 52deg at 50% 50%,
+    #f8edebc3 0%,
+    rgba(113, 196, 255, 0.739) 100%
+  );
+}
+.main-heading {
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffffea;
+  width: auto;
+  height: 50px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.26);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+[contenteditable] {
+  outline: 0 solid transparent;
+}
+
+.main-window {
+  width: 94vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 23px 23px 23px 23px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-top: 8px;
+}
+
+.preview-window {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  overflow-y: auto;
+  background-color: var(--bg-color-preview-window);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.preview-window::-webkit-scrollbar {
+  display: none;
+}
+
+.preview-window:hover {
+  border-radius: 23px 23px 23px 23px;
+}
+
+.main-window > .preview-window {
+  width: 94%;
+  aspect-ratio: 2.137/1;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* here it starts */
+
+header {
+  background: #343a40;
+  color: #dee2e6;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgba(255, 255, 255, 0.934);
+  text-decoration: none;
+}
+
+.hero {
+  margin-top: 5vh;
+  position: relative;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.934);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.hero img {
+  width: 100%;
+  height: 110vh;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.308);
+  padding: 20px;
+  width: 80%;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem;
+}
+.hero-text p,
+h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem;
+}
+
+.products-services {
+  padding: 20px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-services h2 {
+  font-size: 1.7rem;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-item {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  background-color: #2525253a;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.contact {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.contact-info ul li:hover {
+  color: #2b2c2d;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* here it ends */
+
+.main-window > .options--controls {
+  width: 96%;
+  min-height: 20vh;
+  height: auto;
+  border: 2px solid rgba(255, 166, 0, 0.837);
+  border-radius: 20px 20px 20px 20px;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.save-button,
+.change-image-button {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  font-family: "Poppins", "sans-serif";
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--highlighted);
+  color: var(--bg-color-preview-window);
+  border-radius: 23px 23px 23px 23px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.change-image-button {
+}
+
+.html,
+.css {
+  font-family: "Poppins", "sans-serif";
+  color: var(--text-color);
+  text-align: center;
+  margin: 0.5rem;
+
+  position: relative;
+
+  padding: 5px;
+  height: auto;
+}
+.html-heading,
+.css-heading {
+  border-bottom: 2px solid orange;
+}
+.html::after,
+.css::after {
+  content: "";
+  height: 0;
+  width: 3px;
+  background-color: #3c3c3bb3;
+  background-color: orange;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-out;
+}
+
+.html:hover::after,
+.css:hover::after {
+  height: 100%;
+}
+
+.html-body,
+.css-body {
+  padding: 10px;
+  max-width: 562.734px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
