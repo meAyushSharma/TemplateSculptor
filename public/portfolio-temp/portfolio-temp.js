@@ -1,6 +1,5 @@
 function funToSendData() {
   const aboutText = document.getElementById("about-text").innerText;
-  console.log(aboutText);
   const servicesText = document.getElementById("services-text").innerText;
   const contactText = document.getElementById("contact-text").innerText;
   const aboutHead = document.getElementById("about-heading").innerText;
@@ -10,7 +9,6 @@ function funToSendData() {
   const servicesNav = document.getElementById("services-nav").innerText;
   const contactNav = document.getElementById("contact-nav").innerText;
   const footerText = document.getElementById("footer-text").innerText;
-  console.log("hiii");
 
   fetch("/portfolio", {
     method: "POST",
@@ -35,8 +33,6 @@ function funToSendData() {
       return isIt;
     })
     .then((data) => {
-      console.log(data);
-      console.log("html content");
       document.getElementById("html-section").textContent = data.htmlportfolio;
       document.getElementById("css-section").textContent = data.cssportfolio;
     })
